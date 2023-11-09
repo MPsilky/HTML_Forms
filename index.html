@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcel Delivery Form</title>
+    <link rel="stylesheet" href="https://unpkg.com/normalize.css/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <main class="container">
+        <form class="delivery-form">
+            <section class="personal-info">
+                <h1>Delivery Details</h1>
+                <label for="fullName">Name</label>
+                <input id="fullName" type="text" name="fullName" placeholder="Full Name" autocomplete="name">
+
+                <label for="zipCode">Postal Code</label>
+                <input id="zipCode" type="text" name="postalCode" pattern="[0-9]{5}" title="Five digit zip code" required>
+            </section>
+            
+            <section class="additional-info">
+                <label for="messageBox">Message</label>
+                <textarea id="messageBox" name="customerMessage" rows="4" required placeholder="Your message here..."></textarea>
+
+                <label for="secret">Secret</label>
+                <input id="secret" type="password" name="userPassword" minlength="8" placeholder="Create a password">
+            </section>
+            
+            <section class="preferences">
+                <h2>Color Preference</h2>
+                <label><input name="favColor" type="radio" value="Red"> Red</label>
+                <label><input name="favColor" type="radio" value="Blue"> Blue</label>
+                <label><input name="favColor" type="radio" value="White"> White</label>
+            </section>
+            
+            <section class="monster-features">
+                <h2>Monster Features</h2>
+                <label><input name="monsterScales" type="checkbox"> Scales</label>
+                <label><input name="monsterHorns" type="checkbox"> Horns</label>
+                <label><input name="monsterWings" type="checkbox"> Wings</label>
+            </section>
+            
+            <section class="font-choice">
+                <h2>Select Font</h2>
+                <select name="fontSelection">
+                    <option value="Arial">Arial</option>
+                    <option value="Times New Roman">Times</option>
+                    <option value="Comic Sans MS">Comic Sans</option>
+                    <option value="Papyrus">Papyrus</option>
+                </select>
+            </section>
+            
+            <section class="contact-info">
+                <label for="telephone">Telephone</label>
+                <input id="telephone" type="tel" name="userPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+            </section>
+            
+            <div class="form-actions">
+                <button type="submit">Send</button>
+                <button type="reset">Clear</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
